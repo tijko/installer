@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/BIN/ASh
 #
 # Copyright (c) 2014 Citrix Systems, Inc.
 # 
@@ -45,7 +45,7 @@ mk_xc_lvm()
     do_cmd vgcreate xenclient "${PARTITION_DEV}" || return 1
     do_cmd create_lv xenclient boot --size 12M || return 1
     do_cmd create_lv xenclient config --size 12M || return 1
-    do_cmd create_lv xenclient root --size ${DOM0_ROOT_LV_SIZE} || return 1
+    do_cmd create_lv xenclient root --size 50G || return 1
     do_cmd create_lv xenclient root.new --size ${DOM0_ROOT_LV_SIZE} || return 1
     do_cmd create_lv xenclient swap --size 256M || return 1
     do_cmd create_lv xenclient log --size 64M || return 1
